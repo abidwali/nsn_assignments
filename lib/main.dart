@@ -1,6 +1,11 @@
-import 'package:flutter/material.dart';
-import 'todoapp/todo_homescreen.dart';
+// ignore_for_file: unused_import
 
+import 'package:flutter/material.dart';
+import 'package:nsn_assignments/practice/quizapp/index.dart';
+import 'driverapp/signin/getstart.dart';
+import 'driverapp/signupscreens/signup_1.dart';
+import 'driverapp/widgets/register_with_phone.dart';
+import 'todoapp/todo_homescreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,8 +22,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      // home: const SignupScreenOne(),
+      //home: const RegisterWithPhoneNumber(),
+      home: const GetStarted(),
     );
   }
 }
-
