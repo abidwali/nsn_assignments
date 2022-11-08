@@ -35,21 +35,22 @@ class _RegistrationFourState extends State<RegistrationFour> {
         ),
         elevation: 0,
         backgroundColor: Colors.white12,
+        centerTitle: true,
         title: Row(
           children: [
-            StepsIcon(centerWidget: Text("1")),
+            StepsIcon(centerWidget: const Text("1")),
             Container(
               width: 45,
               height: 3,
               color: Colors.black,
             ),
-            StepsIcon(centerWidget: Text("2")),
+            StepsIcon(centerWidget: const Text("2")),
             Container(
               width: 45,
               height: 3,
               color: Colors.black,
             ),
-            StepsIcon(centerWidget: Text("3")),
+            StepsIcon(centerWidget: const Text("3")),
           ],
         ),
       ),
@@ -57,6 +58,7 @@ class _RegistrationFourState extends State<RegistrationFour> {
         child: Padding(
           padding: const EdgeInsets.all(18.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 20),
               TextOne(text: "Step 2"),
@@ -76,6 +78,25 @@ class _RegistrationFourState extends State<RegistrationFour> {
               CustomTextFieldTypeOne(
                 obscureText: false,
                 hintText: "Bank Name",
+              ),
+              Row(
+                children: [
+                  TextOne(text: "Account Type"),
+                ],
+              ),
+              Row(
+                children: [
+                  const Radio(
+                      value: "Saving",
+                      groupValue: "Account Type",
+                      onChanged: null),
+                  TextOne(text: "Savings"),
+                  const Radio(
+                      value: "Current",
+                      groupValue: "Account Type",
+                      onChanged: null),
+                  TextOne(text: "Current"),
+                ],
               ),
               CustomTextFieldTypeOne(
                 obscureText: false,

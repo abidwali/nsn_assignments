@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nsn_assignments/driverapp/signupscreens/registration_1.dart';
+
 import 'package:nsn_assignments/driverapp/widgets/custom_next_button.dart';
 import 'package:nsn_assignments/driverapp/widgets/custom_text.dart';
 

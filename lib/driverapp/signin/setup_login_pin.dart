@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:nsn_assignments/driverapp/signupscreens/registration_1.dart';
 import 'package:nsn_assignments/driverapp/widgets/custom_next_button.dart';
 import 'package:nsn_assignments/driverapp/widgets/custom_text.dart';
 
 import '../widgets/otp_box_widget.dart';
+import 'verify_pin_fingerprint.dart';
 
 class SetupLoginPin extends StatelessWidget {
   const SetupLoginPin({super.key});
@@ -51,12 +51,12 @@ class SetupLoginPin extends StatelessWidget {
               const SizedBox(height: 50),
               NextButton(
                 onPressed: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (context) => RegistrationOne(),
-                  //   ),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const VerifyPinFingerPrint(),
+                    ),
+                  );
                 },
               ),
             ],

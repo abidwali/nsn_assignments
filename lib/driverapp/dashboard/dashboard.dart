@@ -1,5 +1,8 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+import 'package:nsn_assignments/driverapp/dashboard/order/order_pickup.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 import '../utilis/constant_colors.dart';
 
@@ -20,6 +23,10 @@ class _DashboardScreenState extends State<DashboardScreen> {
           padding: const EdgeInsets.all(10),
           child: Column(
             children: [
+              Container(
+                height: 50,
+                //color: kgrey,
+              ),
               Row(
                 children: [
                   const CircleAvatar(
@@ -158,7 +165,19 @@ class _DashboardScreenState extends State<DashboardScreen> {
                           )
                         ],
                       )
-                    : Image.asset("assets/images/map.png"),
+                    : InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const OrderPickup(),
+                              ));
+                        },
+                        child: Image.asset(
+                          "assets/images/map.png",
+                          // fit: BoxFit.fitWidth,
+                        ),
+                      ),
               ),
               const ListTile(
                 title: Text("Quick Actions"),

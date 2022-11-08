@@ -70,7 +70,7 @@ class _QuizAppState extends State<QuizApp> {
                 questionIndex: _questionIndex,
                 questions: _questions,
               )
-            : Result(),
+            : const Result(),
       ),
     );
   }

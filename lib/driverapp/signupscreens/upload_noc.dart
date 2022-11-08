@@ -11,6 +11,7 @@ class UploadNOC extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     double? height, width;
 
     height = MediaQuery.of(context).size.height;

@@ -1,4 +1,4 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
 import 'package:nsn_assignments/driverapp/widgets/custom_text.dart';
@@ -56,6 +56,7 @@ class BankDetailsInfo extends StatelessWidget {
         height: 50,
         width: double.infinity,
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             TextOne(text: headerText),
             const SizedBox(height: 8),

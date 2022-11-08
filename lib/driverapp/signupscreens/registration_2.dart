@@ -39,21 +39,22 @@ class _RegistrationTwoState extends State<RegistrationTwo> {
         ),
         elevation: 0,
         backgroundColor: Colors.white12,
+        centerTitle: true,
         title: Row(
           children: [
-            StepsIcon(centerWidget: Text("1")),
+            StepsIcon(centerWidget: const Text("1")),
             Container(
               width: 45,
               height: 3,
               color: Colors.black,
             ),
-            StepsIcon(centerWidget: Text("2")),
+            StepsIcon(centerWidget: const Text("2")),
             Container(
               width: 45,
               height: 3,
               color: Colors.black,
             ),
-            StepsIcon(centerWidget: Text("3")),
+            StepsIcon(centerWidget: const Text("3")),
           ],
         ),
       ),
@@ -61,6 +62,7 @@ class _RegistrationTwoState extends State<RegistrationTwo> {
         child: Padding(
           padding: const EdgeInsets.all(18.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const SizedBox(height: 10),
               TextOne(text: "Step 1"),

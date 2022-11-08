@@ -1,9 +1,9 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 import 'package:nsn_assignments/driverapp/dashboard/widgets/earning_screen_components.dart';
 import 'package:nsn_assignments/driverapp/utilis/constant_colors.dart';
 import 'package:nsn_assignments/driverapp/widgets/custom_text.dart';
-
-import 'history.dart';
 
 class EarningScreen extends StatelessWidget {
   const EarningScreen({super.key});
@@ -13,6 +13,10 @@ class EarningScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
+          Container(
+            height: 50,
+            //color: kgrey,
+          ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(

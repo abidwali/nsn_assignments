@@ -5,6 +5,7 @@ import 'package:nsn_assignments/practice/quizapp/index.dart';
 import 'driverapp/signin/getstart.dart';
 import 'driverapp/signupscreens/signup_1.dart';
 import 'driverapp/widgets/register_with_phone.dart';
+import 'e_com_app/fruits_and_vegitables.dart';
 import 'todoapp/todo_homescreen.dart';
 
 void main() {
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       ),
       // home: const SignupScreenOne(),
       //home: const RegisterWithPhoneNumber(),
-      home: const GetStarted(),
+      home: const FruitsAndVegitables(),
     );
   }
 }

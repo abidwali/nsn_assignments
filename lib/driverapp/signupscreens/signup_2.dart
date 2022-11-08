@@ -30,11 +30,23 @@ class SignupScreenTwo extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 50),
-              TextOne(text: "verification"),
+              Row(
+                children: [
+                  TextOne(text: "verification"),
+                ],
+              ),
               const SizedBox(height: 5),
-              TextTwo(text: "We sent you an OTP"),
+              Row(
+                children: [
+                  TextTwo(text: "We sent you an OTP"),
+                ],
+              ),
               const SizedBox(height: 5),
-              TextOne(text: "On number: +91 9004457241"),
+              Row(
+                children: [
+                  TextOne(text: "On number: +91 9004457241"),
+                ],
+              ),
               const SizedBox(height: 100),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -54,7 +66,7 @@ class SignupScreenTwo extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) =>  RegistrationOne(),
+                      builder: (context) => RegistrationOne(),
                     ),
                   );
                 },

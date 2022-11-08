@@ -10,18 +10,14 @@ class TextOne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          text,
-          style: const TextStyle(
-            color: Color(0xff6A6A6A),
-            fontSize: 12.0,
-            fontFamily: 'DM Sans',
-            fontWeight: FontWeight.w400,
-          ),
-        ),
-      ],
+    return Text(
+      text,
+      style: const TextStyle(
+        color: Color(0xff6A6A6A),
+        fontSize: 12.0,
+        fontFamily: 'DM Sans',
+        fontWeight: FontWeight.w400,
+      ),
     );
   }
 }
@@ -34,18 +30,14 @@ class TextTwo extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Text(
-          text,
-          style: const TextStyle(
-            color: Color(0xff000000),
-            fontSize: 20.0,
-            fontFamily: 'DM Sans',
-            fontWeight: FontWeight.w400,
-          ),
-        ),
-      ],
+    return Text(
+      text,
+      style: const TextStyle(
+        color: Color(0xff000000),
+        fontSize: 20.0,
+        fontFamily: 'DM Sans',
+        fontWeight: FontWeight.w400,
+      ),
     );
   }
 }

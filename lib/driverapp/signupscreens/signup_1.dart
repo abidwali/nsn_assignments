@@ -31,7 +31,11 @@ class SignupScreenOne extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 50),
-              TextOne(text: "Welcome"),
+              Row(
+                children: [
+                  TextOne(text: "Welcome"),
+                ],
+              ),
               TextTwo(
                 text:
                     "To join please start your registration \nwith your phone no.",

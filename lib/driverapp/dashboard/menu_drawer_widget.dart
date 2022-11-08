@@ -1,7 +1,18 @@
-// ignore_for_file: prefer_const_declarations
+// ignore_for_file: prefer_const_declarations, sized_box_for_whitespace, avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+import 'package:nsn_assignments/driverapp/dashboard/menubar_items/guides.dart';
+import 'package:nsn_assignments/driverapp/dashboard/menubar_items/login_history.dart';
+import 'package:nsn_assignments/driverapp/dashboard/menubar_items/message.dart';
+import 'package:nsn_assignments/driverapp/dashboard/menubar_items/performance.dart';
+import 'package:nsn_assignments/driverapp/dashboard/menubar_items/refer_and_earn.dart';
+import 'package:nsn_assignments/driverapp/dashboard/menubar_items/tips.dart';
+
+import '../profile/profile.dart';
+import '../utilis/constant_colors.dart';
+import 'menubar_items/earnings_and_incentives.dart';
+import 'menubar_items/setting.dart';
 
 class MenuDrawerWidget extends StatefulWidget {
   const MenuDrawerWidget({super.key});
@@ -14,27 +25,16 @@ class _MenuDrawerWidgetState extends State<MenuDrawerWidget> {
   bool isSwitched = false;
   @override
   Widget build(BuildContext context) {
-    final urlImage = "assets/images/profileavatar1.png";
-
     return Drawer(
       child: Material(
         color: Colors.white,
         child: ListView(
           children: <Widget>[
-            buildHeader(
-              urlImage: urlImage,
-              name: "Yash Yadav",
-              vehicleType: "2 WHEELER",
-              onClicked: () {
-                //   Navigator.of(context).push(MaterialPageRoute(
-                //   builder: (context) => UserPage(
-                //     name: 'Sarah Abs',
-                //     urlImage: urlImage,
-                //   ),
-                // ),
-                // )
-              },
+            Container(
+              height: 50,
+              color: kgrey,
             ),
+            buildHeader(),
             Container(
               child: Column(
                 children: [
@@ -42,50 +42,98 @@ class _MenuDrawerWidgetState extends State<MenuDrawerWidget> {
                   buildMenuItem(
                     text: 'Earning & incentives',
                     icon: Icons.account_balance_wallet_outlined,
-                    onClicked: () => selectedItem(context, 0),
+                    onClicked: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const EarningAndIncentives(),
+                          ));
+                    },
                   ),
                   buildMenuItem(
                     text: 'Performance',
                     icon: Icons.account_balance_wallet_outlined,
-                    onClicked: () => selectedItem(context, 1),
+                    onClicked: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const PerformanceMenu(),
+                          ));
+                    },
                   ),
                   buildMenuItem(
                     text: 'Tips',
                     icon: Icons.account_balance_wallet_outlined,
-                    onClicked: () => selectedItem(context, 2),
+                    onClicked: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Tips(),
+                          ));
+                    },
                   ),
                   buildMenuItem(
                     text: 'Login history',
                     icon: Icons.account_balance_wallet_outlined,
-                    onClicked: () => selectedItem(context, 3),
+                    onClicked: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginHistory(),
+                          ));
+                    },
                   ),
                   buildMenuItem(
                     text: 'Guides',
                     icon: Icons.account_balance_wallet_outlined,
-                    onClicked: () => selectedItem(context, 4),
+                    onClicked: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const GuidesMenu(),
+                          ));
+                    },
                   ),
                   buildMenuItem(
                     text: 'Message',
                     icon: Icons.account_balance_wallet_outlined,
-                    onClicked: () => selectedItem(context, 5),
+                    onClicked: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const MessageMenu(),
+                          ));
+                    },
                   ),
                   const Divider(color: Colors.black),
                   buildMenuItem(
                     text: 'Refer & Earn',
                     icon: Icons.account_balance_wallet_outlined,
-                    onClicked: () => selectedItem(context, 5),
+                    onClicked: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ReferAndEarnMenu(),
+                          ));
+                    },
                   ),
                   buildMenuItem(
                     text: 'Setting',
                     icon: Icons.account_balance_wallet_outlined,
-                    onClicked: () => selectedItem(context, 5),
+                    onClicked: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const SettingsMenu(),
+                          ));
+                    },
                   ),
                   Container(
                     height: 100,
                     child: Column(
-                      children: [
-                        const Spacer(),
-                        const ListTile(
+                      children: const [
+                        Spacer(),
+                        ListTile(
                           leading: Icon(Icons.close),
                         ),
                       ],
@@ -100,39 +148,40 @@ class _MenuDrawerWidgetState extends State<MenuDrawerWidget> {
     );
   }
 
-  Widget buildHeader({
-    required String urlImage,
-    required String name,
-    required String vehicleType,
-    required VoidCallback onClicked,
-  }) =>
-      Container(
+  Widget buildHeader() => Container(
         color: const Color(0xffF5F5FA),
         padding:
             const EdgeInsets.only(left: 10, right: 10, bottom: 15, top: 10),
         child: Column(
           children: [
             InkWell(
-              onTap: onClicked,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Profile(),
+                  ),
+                );
+              },
               child: Row(
                 children: [
-                  CircleAvatar(
+                  const CircleAvatar(
                     radius: 30,
-                    backgroundImage: AssetImage(urlImage),
+                    backgroundImage:
+                        AssetImage("assets/images/profileavatar1.png"),
                   ),
                   const SizedBox(width: 15),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
-                        children: [
+                        children: const [
                           Text(
-                            name,
-                            style: const TextStyle(
-                                fontSize: 14, color: Colors.black),
+                            "Yash Yadav",
+                            style: TextStyle(fontSize: 14, color: Colors.black),
                           ),
-                          const SizedBox(width: 15),
-                          const Text(
+                          SizedBox(width: 15),
+                          Text(
                             "★ 4.5",
                             style: TextStyle(fontSize: 14, color: Colors.black),
                           ),
@@ -140,14 +189,13 @@ class _MenuDrawerWidgetState extends State<MenuDrawerWidget> {
                       ),
                       const SizedBox(height: 10),
                       Row(
-                        children: [
+                        children: const [
                           Text(
-                            vehicleType,
-                            style: const TextStyle(
-                                fontSize: 14, color: Colors.black),
+                            "2 WHEELER",
+                            style: TextStyle(fontSize: 14, color: Colors.black),
                           ),
-                          const SizedBox(width: 10),
-                          const Text(
+                          SizedBox(width: 10),
+                          Text(
                             "MH-50-ED-6058",
                             style: TextStyle(fontSize: 14, color: Colors.black),
                           ),

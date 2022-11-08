@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:nsn_assignments/driverapp/profile/profile.dart';
 import 'dashboard.dart';
 import 'earnings.dart';
 import 'history.dart';
@@ -25,26 +24,9 @@ class _RequestDashboardState extends State<RequestDashboard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        automaticallyImplyLeading: false,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const Profile(),
-              ),
-            );
-          },
-          icon: const Icon(
-            Icons.person,
-            color: Colors.black,
-          ),
-        ),
+      body: SafeArea(
+        child: _list[_currentIndex],
       ),
-      body: _list[_currentIndex],
       // body: PageView(
       //   scrollDirection: Axis.horizontal,
 

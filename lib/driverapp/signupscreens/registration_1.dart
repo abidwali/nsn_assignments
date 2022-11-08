@@ -51,6 +51,7 @@ class RegistrationOne extends StatelessWidget {
                   alignment: Alignment.center,
                   //color: Colors.purple,
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       TextOne(text: "Documentation"),
                       TextTwo(
@@ -74,7 +75,7 @@ class RegistrationOne extends StatelessWidget {
                       const SizedBox(height: 10),
                       StepsIcon(
                           centerWidget:
-                              Text("1", style: TextStyle(color: kwhite))),
+                              const Text("1", style: TextStyle(color: kwhite))),
                       Container(
                         height: 80,
                         width: 3,
@@ -82,7 +83,7 @@ class RegistrationOne extends StatelessWidget {
                       ),
                       StepsIcon(
                           centerWidget:
-                              Text("2", style: TextStyle(color: kwhite))),
+                              const Text("2", style: TextStyle(color: kwhite))),
                       Container(
                         height: 80,
                         width: 3,
@@ -90,7 +91,7 @@ class RegistrationOne extends StatelessWidget {
                       ),
                       StepsIcon(
                           centerWidget:
-                              Text("3", style: TextStyle(color: kwhite))),
+                              const Text("3", style: TextStyle(color: kwhite))),
                     ],
                   ),
                 ),
@@ -105,12 +106,14 @@ class RegistrationOne extends StatelessWidget {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const SizedBox(height: 10),
                           TextTwo(text: "Basic Documents"),
                           Padding(
                             padding: const EdgeInsets.only(left: 16),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const SizedBox(height: 5),
                                 TextOne(text: "Photo"),
@@ -128,6 +131,7 @@ class RegistrationOne extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(left: 16),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const SizedBox(height: 5),
                                 TextOne(text: "Vehicle Number"),
@@ -148,6 +152,7 @@ class RegistrationOne extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(left: 16),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 const SizedBox(height: 5),
                                 TextOne(text: "Passbook photo"),
